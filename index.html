@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포폴 스크롤 연습</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./libs/gsap.min.js"></script>
+    <script src="./libs/ScrollTrigger.min.js"></script>
+    <script src="./libs/scroller.min.js"></script>
+    <script src="./assets/js/test.js"></script>
+    <script src="./assets/js/mouse.js" defer></script>
+    <script src="./assets/js/popup.js" defer></script>
+    <script src="./assets/js/gsap.js" defer></script>
+    <script type="module" src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header"></header>
+    <section class="kv">
+      <article>
+        <div class="item land">
+          <img src="./assets/imgs/land.svg" alt="" />
+        </div>
+        <div class="sun"></div>
+        <div class="sea">
+          <!-- <img src="./assets/imgs/sea.png" alt="sea" /> -->
+        </div>
+        <div class="ship">
+          <img src="./assets/imgs/ship.svg" alt="" />
+        </div>
+      </article>
+    </section>
+
+    <section class="intro">
+      <article>
+        <div class="intro_wrap">
+          <div class="intro_img">
+            <img src="./assets/imgs/drop.png" alt="" />
+          </div>
+          <div class="intro_txt">
+            <p>
+              안녕하세요! 만나서 반가워요👋🏻 <br />
+              저는 김현정입니다. <br />
+              바닷 속을 탐험할 준비가 되셨나요? <br />
+              그럼, 숨 참고 시～작 ! 🤿🫧
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="skill">
+      <div class="skill-view">
+        <div class="swim"></div>
+        <div class="skill-wrap">
+          <article></article>
+          <article></article>
+          <article></article>
+          <article class="dark_bg">
+            <div class="dark"></div>
+            <div class="moon_wrap">
+              <img class="moonBg" src="./assets/imgs/moonBg.svg" alt="" />
+              <img class="moon" src="./assets/imgs/moon.svg" alt="" />
+            </div>
+            <img class="mountainBig" src="./assets/imgs/mountainBig.svg" alt="" />
+            <img class="sand" src="./assets/imgs/sand.svg" alt="" />
+            <img class="seaNight" src="./assets/imgs/sea_night.svg" alt="" />
+            <img class="shipOnly" src="./assets/imgs/shipOnly.svg" alt="" />
+          </article>
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article class="reverse bg04">
+            <img class="whale" src="./assets/imgs/whale.svg" alt="" />
+          </article>
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article class="reverse bg03">
+            <img class="cliff" src="./assets/imgs/cliff2.svg" alt="" />
+            <img class="squid" src="./assets/imgs/squid.svg" alt="" />
+            <img class="miniOcto" src="./assets/imgs/miniOcto.svg" alt="" />
+            <img class="stingray" src="./assets/imgs/stingray.svg" alt="" />
+          </article>
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article class="reverse bg02">
+            <img class="blowFish" src="./assets/imgs/blowFish.svg" alt="" />
+            <img class="cliff" src="./assets/imgs/cliff1.svg" alt="" />
+            <img class="turtle" src="./assets/imgs/turtle.svg" alt="" />
+          </article>
+
+          <article></article>
+          <article></article>
+          <article></article>
+          <article class="reverse bg01">
+            <h2 class="title">
+              어쩌면<br />
+              대단한 집순이
+            </h2>
+          </article>
+
+          <article class="horizon horizon01 bg">
+            <div class="leaf-wrap">
+              <div class="left leaf">
+                <img src="./assets/imgs/left_leaf_01.svg" alt="" />
+              </div>
+              <div class="left leaf">
+                <img src="./assets/imgs/left_leaf_02.svg" alt="" />
+              </div>
+              <div class="left leaf">
+                <img src="./assets/imgs/left_leaf_03.svg" alt="" />
+              </div>
+              <div class="left leaf">
+                <img src="./assets/imgs/left_leaf_04.svg" alt="" />
+              </div>
+              <div class="left leaf">
+                <img src="./assets/imgs/left_leaf_05.svg" alt="" />
+              </div>
+              <div class="left root root01">
+                <img src="./assets/imgs/left_root_01.svg" alt="" />
+              </div>
+              <div class="left root root02">
+                <img src="./assets/imgs/left_root_02.svg" alt="" />
+              </div>
+              <div class="right leaf leaf01">
+                <img src="./assets/imgs/right_leaf_01.svg" alt="" />
+              </div>
+              <div class="right leaf leaf02">
+                <img src="./assets/imgs/right_leaf_02.svg" alt="" />
+              </div>
+              <div class="right leaf leaf03">
+                <img src="./assets/imgs/right_leaf_03.svg" alt="" />
+              </div>
+              <div class="right leaf leaf04">
+                <img src="./assets/imgs/right_leaf_04.svg" alt="" />
+              </div>
+              <div class="right root root01">
+                <img src="./assets/imgs/right_root_01.svg" alt="" />
+              </div>
+              <div class="right root root02">
+                <img src="./assets/imgs/right_root_02.svg" alt="" />
+              </div>
+            </div>
+            <div class="fish-wrap">
+              <div class="miniFish-wrap">
+                <div class="miniFish miniFish01">
+                  <img src="./assets/imgs/miniFish_01.svg" alt="" />
+                </div>
+                <div class="miniFish miniFish02">
+                  <img src="./assets/imgs/miniFish_02.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="hipo-wrap">
+                <div class="hipo hipo01">
+                  <img src="./assets/imgs/hipo_01.svg" alt="" />
+                </div>
+                <div class="hipo hipo02">
+                  <img src="./assets/imgs/hipo_02.svg" alt="" />
+                </div>
+                <div class="hipo hipo03">
+                  <img src="./assets/imgs/hipo_03.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="horizon horizon02 bg">
+            <div class="text">
+              <p>제가<br />이런걸<br />좀<br />할 줄 압니다.</p>
+            </div>
+            <div class="skill_list">
+              <ul>
+                <li>
+                  <h2>HTML</h2>
+                  <h3>마크업</h3>
+                  <strong>90%</strong>
+                </li>
+                <li>
+                  <h2>CSS</h2>
+                  <h3>스타일</h3>
+                  <strong>80%</strong>
+                </li>
+                <li>
+                  <h2>Javascript</h2>
+                  <h3>자바스크립트</h3>
+                  <strong>70%</strong>
+                </li>
+                <li>
+                  <h2>Jquery</h2>
+                  <h3>제이쿼리</h3>
+                  <strong>60%</strong>
+                </li>
+                <li>
+                  <h2>Three.js</h2>
+                  <h3>쓰리제이에스</h3>
+                  <strong>30%</strong>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="horizon horizon03 bg">
+            <div class="leaf-wrap">
+              <div class="leaf">
+                <img src="./assets/imgs/left2_leaf_01.svg" alt="" />
+              </div>
+              <div class="leaf">
+                <img src="./assets/imgs/left2_leaf_02.svg" alt="" />
+              </div>
+              <div class="leaf">
+                <img src="./assets/imgs/left2_leaf_03.svg" alt="" />
+              </div>
+              <div class="leaf">
+                <img src="./assets/imgs/left2_leaf_04.svg" alt="" />
+              </div>
+              <div class="root">
+                <img src="./assets/imgs/left2_root_01.svg" alt="" />
+              </div>
+            </div>
+          </article>
+          <article class="horizon horizon04 bg">
+            <div class="leaf-wrap">
+              <div class="leaf">
+                <img src="./assets/imgs/right2_leaf_01.svg" alt="" />
+              </div>
+              <div class="leaf">
+                <img src="./assets/imgs/right2_leaf_02.svg" alt="" />
+              </div>
+              <div class="leaf">
+                <img src="./assets/imgs/right2_leaf_03.svg" alt="" />
+              </div>
+              <div class="leaf">
+                <img src="./assets/imgs/right2_leaf_04.svg" alt="" />
+              </div>
+              <div class="leaf">
+                <img src="./assets/imgs/right2_leaf_05.svg" alt="" />
+              </div>
+              <div class="root root01">
+                <img src="./assets/imgs/right2_root_01.svg" alt="" />
+              </div>
+              <div class="root root02">
+                <img src="./assets/imgs/right2_root_02.svg" alt="" />
+              </div>
+            </div>
+          </article>
+
+          <div class="whole_items">
+            <img src="./assets/imgs/whole.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project">
+      <article>
+        <div class="dark"></div>
+        <div class="moon_wrap">
+          <img class="moonBg" src="./assets/imgs/moonBg.svg" alt="" />
+          <img class="moon" src="./assets/imgs/moon.svg" alt="" />
+        </div>
+        <img class="cloud" src="./assets/imgs/cloud.svg" alt="" />
+        <img class="night_depth3" src="./assets/imgs/night_depth3.svg" alt="" />
+        <img class="night_depth2" src="./assets/imgs/night_depth2.svg" alt="" />
+        <img class="night_depth1" src="./assets/imgs/night_depth1.svg" alt="" />
+
+        <ul>
+          <li>
+            <button class="popupOpenBtn" aria-haspopup="dialog" data-popup="project" data-popupBtn="open" data-project="galaxy">
+              <h2>samsung galaxy</h2>
+            </button>
+            <p>html | css | javascript</p>
+          </li>
+          <li>
+            <button class="popupOpenBtn" aria-haspopup="dialog" data-popup="project" data-popupBtn="open" data-project="fave">
+              <h2>fave.kr</h2>
+            </button>
+            <p>html | css | javascript</p>
+          </li>
+          <li>
+            <button class="popupOpenBtn" aria-haspopup="dialog" data-popup="project" data-popupBtn="open" data-project="hanwha">
+              <h2>hanwha gallery</h2>
+            </button>
+            <p>three.js</p>
+          </li>
+          <li>
+            <button class="popupOpenBtn" aria-haspopup="dialog" data-popup="project" data-popupBtn="open" data-project="semiconductor">
+              <h2>samsung semiconductor</h2>
+            </button>
+            <p>html | css | javascript</p>
+          </li>
+          <li>
+            <button class="popupOpenBtn" aria-haspopup="dialog" data-popup="project" data-popupBtn="open" data-project="wine">
+              <h2>weekly wine</h2>
+            </button>
+            <p>html | css | javascript</p>
+          </li>
+          <li>
+            <button class="popupOpenBtn" aria-haspopup="dialog" data-popup="project" data-popupBtn="open" data-project="airpods">
+              <h2>airpods pro</h2>
+            </button>
+            <p>html | css | javascript</p>
+          </li>
+        </ul>
+      </article>
+      <div class="popup" role="dialog" data-popup="project">
+        <div class="popup_bg" data-popup="project" data-popupBtn="close" data-close="project"></div>
+        <div class="popup_contents">
+          <div class="view">
+            <video src="" autoplay loop muted></video>
+            <!-- <img class="test" src="./assets/imgs/test.png" alt="" /> -->
+          </div>
+          <div class="desc_wrap">
+            <ul>
+              <li class="client">
+                <strong>client</strong>
+                <p></p>
+              </li>
+              <li class="desc">
+                <strong>description</strong>
+                <p></p>
+              </li>
+              <li class="role">
+                <strong>role</strong>
+                <p></p>
+              </li>
+              <li class="date">
+                <strong>date</strong>
+                <p></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="popupCloseBtn" data-popup="project" data-popupBtn="close" data-close="project">
+          <div class="blackBar eq0"></div>
+          <div class="blackBar eq1"></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="contact">
+      <article>
+        <div class="moon_wrap">
+          <img class="moonBg" src="./assets/imgs/moonBg.svg" alt="" />
+          <img class="moon" src="./assets/imgs/moon.svg" alt="" />
+        </div>
+        <img class="ending" src="./assets/imgs/ending.svg" alt="" />
+        <div class="desc">
+          <h2>같이 가치있게 <br />만들어 볼래요?</h2>
+          <ul>
+            <li><a href="mailto:ajdrns8694@gamil.com">ajdrns8694@gamil.com</a></li>
+            <li><a href="tel:01046708690">82_10_4670_8690</a></li>
+            <li class="sns">
+              <a href="https://github.com/guswjd8694" target="_blank">
+                <img class="github" src="./assets/imgs/github.svg" alt="" />
+              </a>
+              <a href="https://www.instagram.com/hyunjoying/" target="_blank">
+                <img class="insta" src="./assets/imgs/insta.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </body>
+  <script></script>
+</html>

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "MoonBold";
+  src: url("../font/Moon\ Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "MoonLight";
+  src: url("../font/Moon\ Light.woff") format("woff");
+}

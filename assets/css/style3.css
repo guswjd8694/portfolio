@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* 공통 */
+section .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh; }
+
+section article {
+  font-size: 56px; }
+
+/* 공통 */
+.section-main {
+  background-color: #f67575;
+  height: calc(180vh); }
+
+.section-intro {
+  background-color: #f6ba75;
+  height: calc(100vh * 2); }
+
+.section-horizon {
+  background-color: #fff67b;
+  height: calc(100vh * 4);
+  -webkit-transform: translate3d(0px, 0vh, 0px);
+          transform: translate3d(0px, 0vh, 0px); }
+  .section-horizon .sticky {
+    overflow: hidden; }
+  .section-horizon .part-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100vw * 4);
+    -webkit-transform: translate3d(0vw, 0px, 0px);
+            transform: translate3d(0vw, 0px, 0px); }
+  .section-horizon article {
+    width: 100vw; }
+
+.section-reverse {
+  background-color: #b1f675;
+  display: none;
+  height: calc(100vh * 5);
+  -webkit-transform: translate3d(0px, -600vh, 0px);
+          transform: translate3d(0px, -600vh, 0px); }
+  .section-reverse article {
+    height: 100vh; }
+
+.section-project {
+  background-color: #75c9f6;
+  height: calc(100vh * 3); }
+
+.section-contact {
+  background-color: #9c75f6;
+  height: calc(100vh * 1); }

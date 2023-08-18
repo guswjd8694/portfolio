@@ -1,0 +1,1020 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+section article {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 5vw;
+  width: 100vw;
+  height: 100vh;
+}
+
+section article.dark_bg {
+  background: linear-gradient(45deg, rgba(70, 69, 137, 0.42) 0%, rgba(56, 44, 102, 0.81) 47%, #181336 100%);
+}
+
+section article div.item {
+  position: absolute;
+  bottom: 0;
+}
+
+section article div.dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+}
+
+section article div.moon_wrap {
+  position: relative;
+}
+
+section article div.moon_wrap .moonBg {
+  width: 20vw;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+}
+
+section article div.moon_wrap .moon {
+  position: absolute;
+  width: 8vw;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+section article img.mountainBig {
+  position: absolute;
+  bottom: 0;
+}
+
+section article img.sand {
+  position: absolute;
+  bottom: 0;
+}
+
+section article img.seaNight {
+  position: absolute;
+  bottom: 0;
+}
+
+section article img.shipOnly {
+  position: absolute;
+  width: 85vw;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: shipOnly 1s infinite alternate cubic-bezier(0.43, 0.04, 0.53, 0.99);
+          animation: shipOnly 1s infinite alternate cubic-bezier(0.43, 0.04, 0.53, 0.99);
+}
+
+@-webkit-keyframes shipOnly {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 8px, 0);
+            transform: translate3d(0, 8px, 0);
+  }
+}
+
+@keyframes shipOnly {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 8px, 0);
+            transform: translate3d(0, 8px, 0);
+  }
+}
+
+section.kv {
+  height: 200vh;
+  background-color: #a0979f;
+}
+
+section.kv article {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+section.kv article .land {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+section.kv article .sun {
+  position: absolute;
+  z-index: -1;
+  bottom: -5%;
+  left: 50%;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  background: linear-gradient(120deg, #fcac95, #f37666);
+}
+
+section.kv article .sea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 20vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ef9c8a), color-stop(40%, #df9a95), to(#d68d8d));
+  background: linear-gradient(180deg, #ef9c8a 0%, #df9a95 40%, #d68d8d 100%);
+}
+
+section.kv article .ship {
+  position: absolute;
+  bottom: 5vw;
+  left: 50%;
+  width: 20vw;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  -webkit-animation: ship 0.8s infinite alternate cubic-bezier(0.43, 0.04, 0.53, 0.99);
+          animation: ship 0.8s infinite alternate cubic-bezier(0.43, 0.04, 0.53, 0.99);
+}
+
+@-webkit-keyframes ship {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 10px, 0);
+            transform: translate3d(-50%, 10px, 0);
+  }
+}
+
+@keyframes ship {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 10px, 0);
+            transform: translate3d(-50%, 10px, 0);
+  }
+}
+
+section.intro {
+  position: relative;
+  height: 200vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d68d8d), color-stop(60%, #eec2b3), to(#f9dfd7));
+  background: linear-gradient(180deg, #d68d8d 0%, #eec2b3 60%, #f9dfd7 100%);
+}
+
+section.intro article {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+section.intro article .intro_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+section.intro article .intro_img {
+  width: 27vw;
+  margin-bottom: 5vh;
+}
+
+section.intro article .intro_txt {
+  max-width: 30vw;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4vw;
+  line-height: 2;
+}
+
+section.skill {
+  height: 1000vh;
+}
+
+section.skill .swim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background: skyblue;
+  -webkit-transform: translate3d(-100%, 200%, 0);
+          transform: translate3d(-100%, 200%, 0);
+}
+
+section.skill .skill-view {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section.skill .skill-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 400vw;
+  height: 600vh;
+  -webkit-transform: translate3d(0, -500vh, 0);
+          transform: translate3d(0, -500vh, 0);
+}
+
+section.skill .skill-wrap .whole_items {
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+section.skill .skill-wrap .whole_items img {
+  width: 100%;
+}
+
+section.skill article.horizon.bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9dfd7), to(#f7d9d4));
+  background: linear-gradient(180deg, #f9dfd7 0%, #f7d9d4 100%);
+}
+
+section.skill article.horizon01 .leaf {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+}
+
+section.skill article.horizon01 .root {
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+section.skill article.horizon01 .left.leaf {
+  left: 0;
+}
+
+section.skill article.horizon01 .left.leaf:nth-child(1) {
+  width: 8vw;
+}
+
+section.skill article.horizon01 .left.leaf:nth-child(2) {
+  width: 4vw;
+}
+
+section.skill article.horizon01 .left.leaf:nth-child(3) {
+  z-index: 6;
+  left: 1%;
+  width: 7vw;
+}
+
+section.skill article.horizon01 .left.leaf:nth-child(4) {
+  left: 4%;
+  width: 10vw;
+}
+
+section.skill article.horizon01 .left.leaf:nth-child(5) {
+  left: 9%;
+  width: 8vw;
+}
+
+section.skill article.horizon01 .left.root01 {
+  width: 10vw;
+  left: 0%;
+  bottom: 6%;
+}
+
+section.skill article.horizon01 .left.root02 {
+  width: 11vw;
+  left: 7%;
+  bottom: 0%;
+}
+
+section.skill article.horizon01 .right {
+  position: absolute;
+  bottom: 0;
+}
+
+section.skill article.horizon01 .right.leaf01 {
+  z-index: 7;
+  left: 55%;
+  width: 10vw;
+}
+
+section.skill article.horizon01 .right.leaf02 {
+  z-index: 6;
+  left: 56%;
+  width: 15vw;
+}
+
+section.skill article.horizon01 .right.leaf03 {
+  z-index: 8;
+  width: 10vw;
+  left: 62%;
+}
+
+section.skill article.horizon01 .right.leaf04 {
+  z-index: 5;
+  width: 11vw;
+  left: 64%;
+}
+
+section.skill article.horizon01 .right.root01 {
+  z-index: 4;
+  left: 60%;
+  width: 4vw;
+}
+
+section.skill article.horizon01 .right.root02 {
+  left: 68%;
+  width: 4vw;
+}
+
+section.skill article.horizon01 .fish-wrap .miniFish-wrap {
+  position: absolute;
+  left: 650px;
+  bottom: 700px;
+  width: 6.5vw;
+}
+
+section.skill article.horizon01 .fish-wrap .miniFish-wrap .miniFish {
+  width: 5vw;
+  height: 3vw;
+}
+
+section.skill article.horizon01 .fish-wrap .miniFish-wrap .miniFish02 {
+  margin: -3vw 0px 0px 0px;
+  padding: 0px 0px 0px 1.5vw;
+}
+
+section.skill article.horizon01 .fish-wrap .hipo-wrap {
+  position: absolute;
+  left: 900px;
+  bottom: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 6vw;
+  height: 5.5vw;
+}
+
+section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo01 {
+  width: 2.5vw;
+  padding: 0 0 0.2vw 0;
+}
+
+section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo02 {
+  width: 1.7vw;
+}
+
+section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo03 {
+  width: 1vw;
+  padding: 0 0 0.5vw 0.3vw;
+}
+
+section.skill article.horizon02 {
+  z-index: 3;
+}
+
+section.skill article.horizon02 .text {
+  position: absolute;
+  left: 0;
+  bottom: 25%;
+}
+
+section.skill article.horizon02 .text p {
+  font-size: 1.3vw;
+  font-weight: 400;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+}
+
+section.skill article.horizon02 .skill_list {
+  position: absolute;
+  left: 540px;
+  width: 90vw;
+}
+
+section.skill article.horizon02 .skill_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.skill article.horizon02 .skill_list ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.skill article.horizon02 .skill_list ul li:nth-child(2) {
+  top: 3vw;
+}
+
+section.skill article.horizon02 .skill_list ul li:nth-child(3) {
+  bottom: 1vw;
+}
+
+section.skill article.horizon02 .skill_list ul li:nth-child(4) {
+  top: 5vw;
+}
+
+section.skill article.horizon02 .skill_list ul li:nth-child(5) {
+  top: 5vw;
+}
+
+section.skill article.horizon02 .skill_list ul li h2 {
+  font-size: 0.6vw;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+section.skill article.horizon02 .skill_list ul li h3 {
+  font-size: 1.2vw;
+  color: #5b5b5b;
+  padding: 0.6vw 0;
+}
+
+section.skill article.horizon02 .skill_list ul li strong {
+  font-size: 2vw;
+  color: #a386a8;
+}
+
+section.skill article.horizon03 {
+  z-index: 2;
+}
+
+section.skill article.horizon03 .leaf-wrap {
+  position: absolute;
+  z-index: 5;
+  right: 0%;
+  bottom: 0%;
+  width: 19vw;
+  height: 12vw;
+}
+
+section.skill article.horizon03 .leaf-wrap .leaf {
+  position: absolute;
+  bottom: 0;
+}
+
+section.skill article.horizon03 .leaf-wrap .leaf:nth-child(1) {
+  z-index: 2;
+  width: 8vw;
+}
+
+section.skill article.horizon03 .leaf-wrap .leaf:nth-child(2) {
+  left: 3vw;
+  width: 5.5vw;
+}
+
+section.skill article.horizon03 .leaf-wrap .leaf:nth-child(3) {
+  z-index: 1;
+  left: 2.7vw;
+  width: 9vw;
+}
+
+section.skill article.horizon03 .leaf-wrap .leaf:nth-child(4) {
+  left: 5vw;
+  width: 8vw;
+}
+
+section.skill article.horizon03 .leaf-wrap .root {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 7.5vw;
+  width: 1.8vw;
+}
+
+section.skill article.horizon04 .leaf-wrap {
+  position: absolute;
+  z-index: 5;
+  right: 0%;
+  bottom: 0%;
+  width: 19vw;
+  height: 12vw;
+}
+
+section.skill article.horizon04 .leaf-wrap .leaf {
+  position: absolute;
+  bottom: 0;
+}
+
+section.skill article.horizon04 .leaf-wrap .leaf:nth-child(1) {
+  z-index: 2;
+  width: 8vw;
+}
+
+section.skill article.horizon04 .leaf-wrap .leaf:nth-child(2) {
+  left: 4vw;
+  width: 10vw;
+}
+
+section.skill article.horizon04 .leaf-wrap .leaf:nth-child(3) {
+  z-index: 2;
+  left: 9vw;
+  width: 8vw;
+}
+
+section.skill article.horizon04 .leaf-wrap .leaf:nth-child(4) {
+  z-index: 1;
+  left: 11vw;
+  width: 8vw;
+}
+
+section.skill article.horizon04 .leaf-wrap .leaf:nth-child(5) {
+  left: 10vw;
+  width: 8vw;
+}
+
+section.skill article.horizon04 .leaf-wrap .root {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+section.skill article.horizon04 .leaf-wrap .root01 {
+  width: 8vw;
+}
+
+section.skill article.horizon04 .leaf-wrap .root02 {
+  bottom: 4vw;
+  width: 9vw;
+  left: 9vw;
+}
+
+section.skill article.reverse.bg01 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f9dfd6), to(#efbdc0));
+  background: linear-gradient(0deg, #f9dfd6 0%, #efbdc0 100%);
+}
+
+section.skill article.reverse.bg02 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#efbdc0), to(#d8aebc));
+  background: linear-gradient(0deg, #efbdc0 0%, #d8aebc 100%);
+}
+
+section.skill article.reverse.bg02 .cliff {
+  right: 0;
+}
+
+section.skill article.reverse.bg02 img {
+  position: absolute;
+}
+
+section.skill article.reverse.bg02 img.cliff {
+  width: 15vw;
+}
+
+section.skill article.reverse.bg02 img.blowFish {
+  width: 6vw;
+  bottom: 0;
+  right: 0;
+}
+
+section.skill article.reverse.bg02 img.turtle {
+  width: 10vw;
+  left: 0;
+  top: 15vw;
+}
+
+section.skill article.reverse.bg03 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#d8aebc), to(#bf9fb7));
+  background: linear-gradient(0deg, #d8aebc 0%, #bf9fb7 100%);
+}
+
+section.skill article.reverse.bg03 img {
+  position: absolute;
+}
+
+section.skill article.reverse.bg03 img.cliff {
+  width: 15vw;
+  top: 0;
+  left: 0;
+}
+
+section.skill article.reverse.bg03 img.squid {
+  width: 6vw;
+  right: 0;
+  bottom: 5vw;
+}
+
+section.skill article.reverse.bg03 img.miniOcto {
+  width: 10vw;
+  left: 0;
+}
+
+section.skill article.reverse.bg03 img.stingray {
+  width: 10vw;
+  right: 0;
+  top: 5vw;
+}
+
+section.skill article.reverse.bg04 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#bf9fb7), to(#8378ac));
+  background: linear-gradient(0deg, #bf9fb7 0%, #8378ac 100%);
+}
+
+section.skill article.reverse.bg04 img {
+  position: absolute;
+}
+
+section.skill article.reverse.bg04 img.whale {
+  width: 10vw;
+  left: 0;
+  top: 50%;
+}
+
+section.skill article.reverse h2.title {
+  position: absolute;
+  bottom: 40vw;
+  left: 5vw;
+  font-size: 2vw;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+}
+
+section.skill article.night {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+section.skill article.night img {
+  width: 100%;
+}
+
+section.project {
+  height: 200vh;
+  margin-top: -1px;
+}
+
+section.project article {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ac7f7f), color-stop(40%, #59527e), to(#263349));
+  background: linear-gradient(0deg, #ac7f7f 0%, #59527e 40%, #263349 100%);
+}
+
+section.project article div.moon_wrap {
+  position: relative;
+  top: 10vw;
+  left: 25vw;
+}
+
+section.project article div.moon_wrap .moonBg {
+  position: static;
+  width: 22vw;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+}
+
+section.project article div.moon_wrap .moon {
+  position: absolute;
+  width: 10vw;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+section.project article img {
+  position: absolute;
+  bottom: 0;
+}
+
+section.project article img.cloud {
+  top: 50%;
+  left: 0;
+}
+
+section.project article ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 4vw;
+  padding: 6vw 5vw;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+section.project article ul li {
+  font-family: "MoonLight";
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  max-width: 240px;
+}
+
+section.project article ul li button:hover h2 {
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+section.project article ul li button h2 {
+  font-family: "MoonLight";
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+section.contact {
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(15%, #152233), color-stop(70%, #111c2b));
+  background: linear-gradient(0deg, #152233 15%, #111c2b 70%);
+}
+
+section.contact article {
+  display: block;
+}
+
+section.contact .desc {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 40px 50px 50px;
+  text-transform: uppercase;
+}
+
+section.contact div.moon_wrap {
+  position: absolute;
+  bottom: 4.5vw;
+  left: 42vw;
+}
+
+section.contact img.ending {
+  position: absolute;
+  bottom: 0;
+}
+
+section.contact img.insta, section.contact img.github {
+  width: 15px;
+  height: 15px;
+}
+
+section.contact h2 {
+  font-family: "Noto Serif KR";
+  font-size: 32px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+section.contact ul li.sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+section.contact ul li a {
+  font-family: "MoonLight";
+  font-size: 17px;
+  color: #d6fffc;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+body.popupOpen {
+  overflow-y: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+body.popupOpen section.project article ul {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.popup.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup .popup_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup .popup_contents {
+  position: relative;
+  max-width: 800px;
+  width: 75vw;
+  max-height: 800px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.popup .popup_contents:hover + .popupCloseBtn {
+  background-color: #323232;
+}
+
+.popup .popup_contents .view {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.popup .popup_contents .view video {
+  width: 100%;
+}
+
+.popup .popup_contents .desc_wrap {
+  position: absolute;
+  bottom: 90px;
+}
+
+.popup .popup_contents .desc_wrap ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.popup .popup_contents .desc_wrap ul li {
+  text-transform: uppercase;
+}
+
+.popup .popup_contents .desc_wrap ul li strong {
+  font-family: "MoonLight";
+  color: #bbb;
+  font-size: 13px;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.popup .popup_contents .desc_wrap ul li p {
+  font-family: "MoonLight";
+  color: #8fa0ce;
+  font-size: 17px;
+}
+
+.popup .popupCloseBtn {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  background-color: #323232;
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+  transition: -webkit-transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+  transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+  transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms, -webkit-transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+  cursor: pointer;
+}
+
+.popup .popupCloseBtn:hover {
+  background-color: #e5306c;
+}
+
+.popup .popupCloseBtn .blackBar {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  margin: auto;
+  background-color: #fff;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  border-radius: 2px;
+  -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+  transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+}
+
+.popup .popupCloseBtn .blackBar.eq0 {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.popup .popupCloseBtn .blackBar.eq1 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}

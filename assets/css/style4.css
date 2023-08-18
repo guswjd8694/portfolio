@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+section article {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  width: 100vw;
+  height: 100vh;
+}
+section article div.item {
+  position: absolute;
+  bottom: 0;
+}
+section article div.dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+}
+section article div.moon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: yellow;
+}
+section.kv {
+  height: 200vh;
+  background-color: #a0979f;
+}
+section.kv article {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+section.kv article .land {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+section.kv article .sun {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: linear-gradient(120deg, rgb(252, 172, 149), rgb(243, 118, 102));
+}
+section.kv article .sea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 400px;
+  background: linear-gradient(180deg, rgb(239, 156, 138) 0%, rgb(223, 154, 149) 40%, rgb(214, 141, 141) 100%);
+}
+section.intro {
+  height: 200vh;
+  background: linear-gradient(180deg, rgb(214, 141, 141) 0%, rgb(238, 194, 179) 60%, rgb(249, 223, 215) 100%);
+}
+section.intro article {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+section.intro article .intro_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.intro article .intro_img {
+  width: 15vw;
+  height: 40vh;
+  margin-bottom: 5vh;
+  background-color: rgb(201, 196, 196);
+}
+section.intro article .intro_txt {
+  max-width: 430px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8vw;
+}
+section.skill {
+  height: 1000vh;
+}
+section.skill .swim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background: skyblue;
+  transform: translate3d(-100%, 200%, 0);
+}
+section.skill .skill-view {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+section.skill .skill-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 400vw;
+  height: 600vh;
+  transform: translate3d(0, -500vh, 0);
+}
+section.skill .skill-wrap .whole_items {
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+section.skill .skill-wrap .whole_items img {
+  width: 100%;
+}
+section.skill article.horizon.bg {
+  background: linear-gradient(180deg, rgb(249, 223, 215) 0%, rgb(247, 217, 212) 100%);
+}
+section.skill article.horizon01 .leaf {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+section.skill article.horizon01 .root {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+section.skill article.horizon01 .left.leaf {
+  left: 0;
+}
+section.skill article.horizon01 .left.leaf:nth-child(1) {
+  width: 9vw;
+}
+section.skill article.horizon01 .left.leaf:nth-child(2) {
+  width: 5vw;
+}
+section.skill article.horizon01 .left.leaf:nth-child(3) {
+  z-index: 3;
+  left: 1%;
+  width: 8vw;
+}
+section.skill article.horizon01 .left.leaf:nth-child(4) {
+  left: 4%;
+  width: 12vw;
+}
+section.skill article.horizon01 .left.leaf:nth-child(5) {
+  left: 9%;
+  width: 9vw;
+}
+section.skill article.horizon01 .left.root01 {
+  width: 11vw;
+  left: 0%;
+  bottom: 6%;
+}
+section.skill article.horizon01 .left.root02 {
+  width: 12vw;
+  left: 7%;
+  bottom: 0%;
+}
+section.skill article.horizon01 .right {
+  position: absolute;
+  bottom: 0;
+}
+section.skill article.horizon01 .right.leaf01 {
+  z-index: 3;
+  left: 55%;
+  width: 10vw;
+}
+section.skill article.horizon01 .right.leaf02 {
+  z-index: 2;
+  left: 56%;
+  width: 15vw;
+}
+section.skill article.horizon01 .right.leaf03 {
+  z-index: 4;
+  width: 10vw;
+  left: 62%;
+}
+section.skill article.horizon01 .right.leaf04 {
+  z-index: 2;
+  width: 11vw;
+  left: 64%;
+}
+section.skill article.horizon01 .right.root01 {
+  z-index: 1;
+  left: 60%;
+  width: 4vw;
+}
+section.skill article.horizon01 .right.root02 {
+  left: 68%;
+  width: 4vw;
+}
+section.skill article.horizon01 .fish-wrap .miniFish-wrap {
+  position: absolute;
+  left: 650px;
+  bottom: 700px;
+  width: 6.5vw;
+}
+section.skill article.horizon01 .fish-wrap .miniFish-wrap .miniFish {
+  width: 5vw;
+  height: 3vw;
+}
+section.skill article.horizon01 .fish-wrap .miniFish-wrap .miniFish02 {
+  margin: -3vw 0px 0px 0px;
+  padding: 0px 0px 0px 1.5vw;
+}
+section.skill article.horizon01 .fish-wrap .hipo-wrap {
+  position: absolute;
+  left: 900px;
+  bottom: 540px;
+  display: flex;
+  align-items: flex-end;
+  width: 6vw;
+  height: 5.5vw;
+}
+section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo01 {
+  width: 2.5vw;
+  padding: 0 0 0.2vw 0;
+}
+section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo02 {
+  width: 1.7vw;
+}
+section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo03 {
+  width: 1vw;
+  padding: 0 0 0.5vw 0.3vw;
+}
+section.skill article.horizon02 {
+  z-index: 2;
+}
+section.skill article.horizon02 .text {
+  position: absolute;
+  left: 0;
+  bottom: 25%;
+}
+section.skill article.horizon02 .text p {
+  font-size: 1.3vw;
+  font-weight: 400;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+}
+section.skill article.horizon02 .skill_list ul {
+  display: flex;
+}
+section.skill article.horizon02 .skill_list ul li {
+  display: flex;
+  flex-direction: column;
+}
+section.skill article.horizon02 .skill_list ul li h2 {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+section.skill article.horizon02 .skill_list ul li h3 {
+  font-size: 32px;
+  color: #5b5b5b;
+  padding: 20px 0;
+}
+section.skill article.horizon02 .skill_list ul li strong {
+  font-size: 54px;
+  color: #a386a8;
+}
+section.skill article.horizon03 {
+  z-index: 2;
+}
+section.skill article.reverse.bg01 {
+  background: linear-gradient(0deg, rgb(249, 223, 214) 0%, rgb(239, 189, 192) 100%);
+}
+section.skill article.reverse.bg02 {
+  background: linear-gradient(0deg, rgb(239, 189, 192) 0%, rgb(216, 174, 188) 100%);
+}
+section.skill article.reverse.bg03 {
+  background: linear-gradient(0deg, rgb(216, 174, 188) 0%, rgb(191, 159, 183) 100%);
+}
+section.skill article.reverse.bg04 {
+  background: linear-gradient(0deg, rgb(191, 159, 183) 0%, rgb(131, 120, 172) 100%);
+}
+section.skill article.night {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+section.skill article.night img {
+  width: 100%;
+}
+section.project {
+  height: 200vh;
+  margin-top: -1px;
+}
+section.project article {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+section.contact {
+  height: 100vh;
+}
