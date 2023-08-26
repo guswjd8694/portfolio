@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@font-face {
+  font-family: "MapoFlowerIsland";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -129,6 +136,29 @@ section.kv article {
   top: 0;
 }
 
+section.kv article .kv_txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 4vw;
+  color: #3d3d3e;
+  line-height: 1.5;
+}
+
+section.kv article .kv_txt h2 {
+  font-family: "MapoFlowerIsland";
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+section.kv article .kv_txt p {
+  font-family: "MoonLight";
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 section.kv article .land {
   position: absolute;
   bottom: 0;
@@ -141,29 +171,89 @@ section.kv article .sun {
   z-index: -1;
   bottom: -5%;
   left: 50%;
-  width: 40vw;
-  height: 40vw;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   background: linear-gradient(120deg, #fcac95, #f37666);
 }
 
-section.kv article .sea {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+section.kv article .waveWrap {
+  position: relative;
+  height: 100vh;
   width: 100vw;
-  height: 20vw;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ef9c8a), color-stop(40%, #df9a95), to(#d68d8d));
-  background: linear-gradient(180deg, #ef9c8a 0%, #df9a95 40%, #d68d8d 100%);
+  bottom: 0%;
+  z-index: 0;
+}
+
+section.kv article .waveWrap::after {
+  content: "";
+  width: 100%;
+  height: 27vh;
+  background: #d38d8d;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+section.kv article .waveWrap .waves {
+  position: absolute;
+  left: 0;
+  bottom: 27vh;
+  width: 100%;
+  height: 5vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+section.kv article .waveWrap .waves .parallax > use {
+  -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+section.kv article .waveWrap .waves .parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+section.kv article .waveWrap .waves .parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+
+@-webkit-keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
 }
 
 section.kv article .ship {
   position: absolute;
   bottom: 5vw;
   left: 50%;
-  width: 20vw;
+  width: 15vw;
   -webkit-transform: translate3d(-50%, 0, 0);
           transform: translate3d(-50%, 0, 0);
   -webkit-animation: ship 0.8s infinite alternate cubic-bezier(0.43, 0.04, 0.53, 0.99);
@@ -194,7 +284,7 @@ section.kv article .ship {
 
 section.intro {
   position: relative;
-  height: 200vh;
+  height: 300vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#d68d8d), color-stop(60%, #eec2b3), to(#f9dfd7));
   background: linear-gradient(180deg, #d68d8d 0%, #eec2b3 60%, #f9dfd7 100%);
 }
@@ -223,7 +313,7 @@ section.intro article .intro_wrap {
 }
 
 section.intro article .intro_img {
-  width: 27vw;
+  width: 20vw;
   margin-bottom: 5vh;
 }
 
@@ -231,12 +321,12 @@ section.intro article .intro_txt {
   max-width: 30vw;
   width: 100%;
   text-align: center;
-  font-size: 1.4vw;
-  line-height: 2;
+  font-size: 1vw;
+  line-height: 1.6;
 }
 
 section.skill {
-  height: 1000vh;
+  height: 2000vh;
 }
 
 section.skill .swim {
@@ -308,7 +398,8 @@ section.skill article.horizon01 .root {
 }
 
 section.skill article.horizon01 .left.leaf {
-  left: 0;
+  left: -8px;
+  bottom: -5px;
 }
 
 section.skill article.horizon01 .left.leaf:nth-child(1) {
@@ -339,52 +430,210 @@ section.skill article.horizon01 .left.root01 {
   width: 10vw;
   left: 0%;
   bottom: 6%;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 section.skill article.horizon01 .left.root02 {
   width: 11vw;
   left: 7%;
   bottom: 0%;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 section.skill article.horizon01 .right {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
 }
 
 section.skill article.horizon01 .right.leaf01 {
   z-index: 7;
   left: 55%;
   width: 10vw;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 section.skill article.horizon01 .right.leaf02 {
   z-index: 6;
   left: 56%;
+  bottom: -8px;
   width: 15vw;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 section.skill article.horizon01 .right.leaf03 {
   z-index: 8;
   width: 10vw;
-  left: 62%;
+  left: 61.8%;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 section.skill article.horizon01 .right.leaf04 {
   z-index: 5;
   width: 11vw;
   left: 64%;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 section.skill article.horizon01 .right.root01 {
   z-index: 4;
   left: 60%;
   width: 4vw;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 section.skill article.horizon01 .right.root02 {
   left: 68%;
   width: 4vw;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+section.skill article.horizon01 .ani1 {
+  -webkit-animation: leaf 3s linear infinite;
+          animation: leaf 3s linear infinite;
+}
+
+section.skill article.horizon01 .ani2 {
+  -webkit-animation: leaf2 3s linear infinite;
+          animation: leaf2 3s linear infinite;
+}
+
+section.skill article.horizon01 .ani3 {
+  -webkit-animation: leaf3 3s linear infinite;
+          animation: leaf3 3s linear infinite;
+}
+
+@-webkit-keyframes leaf {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  50% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
+
+@keyframes leaf {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  50% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
+
+@-webkit-keyframes leaf2 {
+  0% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
+
+@keyframes leaf2 {
+  0% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
+
+@-webkit-keyframes leaf3 {
+  0% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+}
+
+@keyframes leaf3 {
+  0% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  100% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
 }
 
 section.skill article.horizon01 .fish-wrap .miniFish-wrap {
@@ -397,11 +646,37 @@ section.skill article.horizon01 .fish-wrap .miniFish-wrap {
 section.skill article.horizon01 .fish-wrap .miniFish-wrap .miniFish {
   width: 5vw;
   height: 3vw;
+  -webkit-animation: fish 1.5s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+          animation: fish 1.5s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+@-webkit-keyframes fish {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+  }
+}
+
+@keyframes fish {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+  }
 }
 
 section.skill article.horizon01 .fish-wrap .miniFish-wrap .miniFish02 {
   margin: -3vw 0px 0px 0px;
   padding: 0px 0px 0px 1.5vw;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 section.skill article.horizon01 .fish-wrap .hipo-wrap {
@@ -418,6 +693,33 @@ section.skill article.horizon01 .fish-wrap .hipo-wrap {
   height: 5.5vw;
 }
 
+section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo {
+  -webkit-animation: hipo 0.7s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+          animation: hipo 0.7s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+@-webkit-keyframes hipo {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 10%);
+            transform: translate(0, 10%);
+  }
+}
+
+@keyframes hipo {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 10%);
+            transform: translate(0, 10%);
+  }
+}
+
 section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo01 {
   width: 2.5vw;
   padding: 0 0 0.2vw 0;
@@ -425,11 +727,90 @@ section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo01 {
 
 section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo02 {
   width: 1.7vw;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 section.skill article.horizon01 .fish-wrap .hipo-wrap .hipo03 {
   width: 1vw;
   padding: 0 0 0.5vw 0.3vw;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+section.skill article.horizon01 .dori {
+  position: absolute;
+  width: 5vw;
+  -webkit-animation: dori 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+          animation: dori 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+@-webkit-keyframes dori {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(5px, 10px);
+            transform: translate(5px, 10px);
+  }
+}
+
+@keyframes dori {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(5px, 10px);
+            transform: translate(5px, 10px);
+  }
+}
+
+section.skill article.horizon01 .nimo-wrap {
+  position: absolute;
+}
+
+section.skill article.horizon01 .nimo-wrap .nimo {
+  -webkit-animation: nimo 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+          animation: nimo 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+@-webkit-keyframes nimo {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-10px, 10px);
+            transform: translate(-10px, 10px);
+  }
+}
+
+@keyframes nimo {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-10px, 10px);
+            transform: translate(-10px, 10px);
+  }
+}
+
+section.skill article.horizon01 .nimo-wrap .nimo01 {
+  width: 4.5vw;
+}
+
+section.skill article.horizon01 .nimo-wrap .nimo02 {
+  width: 2.5vw;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+section.skill article.horizon01 .nimo-wrap .nimo02 img {
+  margin-top: -30%;
+  margin-left: 100%;
 }
 
 section.skill article.horizon02 {
@@ -442,17 +823,17 @@ section.skill article.horizon02 .text {
   bottom: 25%;
 }
 
-section.skill article.horizon02 .text p {
-  font-size: 1.3vw;
-  font-weight: 400;
-  font-family: "Noto Sans KR", sans-serif;
+section.skill article.horizon02 .text h2 {
+  font-size: 24px;
+  font-weight: 200;
+  font-family: "Noto Serif KR", serif;
   line-height: 1.5;
 }
 
 section.skill article.horizon02 .skill_list {
   position: absolute;
   left: 540px;
-  width: 90vw;
+  width: 95vw;
 }
 
 section.skill article.horizon02 .skill_list ul {
@@ -491,20 +872,25 @@ section.skill article.horizon02 .skill_list ul li:nth-child(5) {
   top: 5vw;
 }
 
-section.skill article.horizon02 .skill_list ul li h2 {
-  font-size: 0.6vw;
-  color: rgba(0, 0, 0, 0.6);
+section.skill article.horizon02 .skill_list ul li .type {
+  font-family: "MoonLight";
+  font-size: 12px;
+  font-weight: 300;
+  color: #555;
 }
 
-section.skill article.horizon02 .skill_list ul li h3 {
-  font-size: 1.2vw;
-  color: #5b5b5b;
+section.skill article.horizon02 .skill_list ul li .name {
+  font-family: "MoonLight";
+  font-size: 24px;
+  font-weight: 300;
   padding: 0.6vw 0;
 }
 
-section.skill article.horizon02 .skill_list ul li strong {
-  font-size: 2vw;
-  color: #a386a8;
+section.skill article.horizon02 .skill_list ul li .percent {
+  font-family: "MoonLight";
+  font-size: 40px;
+  font-weight: 300;
+  color: #996f98;
 }
 
 section.skill article.horizon03 {
@@ -552,6 +938,37 @@ section.skill article.horizon03 .leaf-wrap .root {
   bottom: 0;
   left: 7.5vw;
   width: 1.8vw;
+}
+
+section.skill article.horizon04 .miniFish-wrap {
+  position: absolute;
+  width: 7vw;
+}
+
+section.skill article.horizon04 .miniFish-wrap .miniFish {
+  width: 7vw;
+  height: 3vw;
+  -webkit-animation: fish 1.5s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+          animation: fish 1.5s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+section.skill article.horizon04 .miniFish-wrap .miniFish02 {
+  margin: -3vw 0px 0px 0px;
+  padding: 0px 0px 0px 1.5vw;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+section.skill article.horizon04 .dori {
+  position: absolute;
+  width: 6vw;
+  -webkit-animation: dori 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+          animation: dori 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+}
+
+section.skill article.horizon04 .dori img {
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
 }
 
 section.skill article.horizon04 .leaf-wrap {
@@ -640,7 +1057,7 @@ section.skill article.reverse.bg02 img.blowFish {
 }
 
 section.skill article.reverse.bg02 img.turtle {
-  width: 10vw;
+  width: 15vw;
   left: 0;
   top: 15vw;
 }
@@ -672,7 +1089,7 @@ section.skill article.reverse.bg03 img.miniOcto {
 }
 
 section.skill article.reverse.bg03 img.stingray {
-  width: 10vw;
+  width: 18vw;
   right: 0;
   top: 5vw;
 }
@@ -687,20 +1104,23 @@ section.skill article.reverse.bg04 img {
 }
 
 section.skill article.reverse.bg04 img.whale {
-  width: 10vw;
+  width: 25vw;
   left: 0;
   top: 50%;
 }
 
 section.skill article.reverse h2.title {
   position: absolute;
-  bottom: 40vw;
+  bottom: 38vw;
   left: 5vw;
-  font-size: 2vw;
+  font-family: "Noto Serif KR";
+  font-size: 32px;
+  line-height: 1.5;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: sideways-right;
+  color: #694969;
 }
 
 section.skill article.night {

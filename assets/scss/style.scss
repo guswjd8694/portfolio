@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+@font-face {
+  font-family: "MapoFlowerIsland";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   overflow-x: hidden;
@@ -106,6 +112,29 @@ section {
       position: sticky;
       top: 0;
 
+      .kv_txt {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 4vw;
+        color: #3d3d3e;
+        line-height: 1.5;
+
+        h2 {
+          font-family: "MapoFlowerIsland";
+          font-size: 45px;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-family: "MoonLight";
+          font-size: 18px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+
       .land {
         position: absolute;
         bottom: 0;
@@ -117,27 +146,71 @@ section {
         z-index: -1;
         bottom: -5%;
         left: 50%;
-        width: 40vw;
-        height: 40vw;
+        width: 30vw;
+        height: 30vw;
         border-radius: 50%;
         transform: translate3d(-50%, -50%, 0);
         background: linear-gradient(120deg, rgba(252, 172, 149, 1), rgba(243, 118, 102, 1));
       }
 
-      .sea {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+      .waveWrap {
+        position: relative;
+        height: 100vh;
         width: 100vw;
-        height: 20vw;
-        background: linear-gradient(180deg, rgba(239, 156, 138, 1) 0%, rgba(223, 154, 149, 1) 40%, rgba(214, 141, 141, 1) 100%);
+        bottom: 0%;
+        z-index: 0;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 27vh;
+          background: rgba(211, 141, 141, 1);
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+
+        .waves {
+          position: absolute;
+          left: 0;
+          bottom: 27vh;
+          width: 100%;
+          height: 5vh;
+          margin-bottom: -7px;
+          min-height: 100px;
+          max-height: 150px;
+
+          .parallax > use {
+            animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          }
+
+          .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 4s;
+          }
+
+          .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 7s;
+          }
+        }
+
+        @keyframes move-forever {
+          0% {
+            transform: translate3d(-90px, 0, 0);
+          }
+
+          100% {
+            transform: translate3d(85px, 0, 0);
+          }
+        }
       }
 
       .ship {
         position: absolute;
         bottom: 5vw;
         left: 50%;
-        width: 20vw;
+        width: 15vw;
         transform: translate3d(-50%, 0, 0);
         animation: ship 0.8s infinite alternate cubic-bezier(0.43, 0.04, 0.53, 0.99);
 
@@ -156,7 +229,7 @@ section {
 
   &.intro {
     position: relative;
-    height: 200vh;
+    height: 300vh;
     background: linear-gradient(180deg, rgba(214, 141, 141, 1) 0%, rgba(238, 194, 179, 1) 60%, rgba(249, 223, 215, 1) 100%);
 
     article {
@@ -173,22 +246,22 @@ section {
         }
 
         &_img {
-          width: 27vw;
+          width: 20vw;
           margin-bottom: 5vh;
         }
         &_txt {
           max-width: 30vw;
           width: 100%;
           text-align: center;
-          font-size: 1.4vw;
-          line-height: 2;
+          font-size: 1vw;
+          line-height: 1.6;
         }
       }
     }
   }
 
   &.skill {
-    height: 1000vh;
+    height: 2000vh;
 
     .swim {
       position: fixed;
@@ -251,7 +324,8 @@ section {
 
           .left {
             &.leaf {
-              left: 0;
+              left: -8px;
+              bottom: -5px;
 
               &:nth-child(1) {
                 width: 8vw;
@@ -279,39 +353,46 @@ section {
                 width: 10vw;
                 left: 0%;
                 bottom: 6%;
+                animation-duration: 5s;
               }
               &02 {
                 width: 11vw;
                 left: 7%;
                 bottom: 0%;
+                animation-duration: 5s;
               }
             }
           }
 
           .right {
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
 
             &.leaf {
               &01 {
                 z-index: 7;
                 left: 55%;
                 width: 10vw;
+                animation-duration: 2s;
               }
               &02 {
                 z-index: 6;
                 left: 56%;
+                bottom: -8px;
                 width: 15vw;
+                animation-duration: 4s;
               }
               &03 {
                 z-index: 8;
                 width: 10vw;
-                left: 62%;
+                left: 61.8%;
+                animation-duration: 5s;
               }
               &04 {
                 z-index: 5;
                 width: 11vw;
                 left: 64%;
+                animation-duration: 2s;
               }
             }
 
@@ -320,10 +401,75 @@ section {
                 z-index: 4;
                 left: 60%;
                 width: 4vw;
+                animation-duration: 5s;
               }
               &02 {
                 left: 68%;
                 width: 4vw;
+                animation-duration: 5s;
+              }
+            }
+          }
+
+          .ani {
+            &1 {
+              animation: leaf 3s linear infinite;
+            }
+            &2 {
+              animation: leaf2 3s linear infinite;
+            }
+            &3 {
+              animation: leaf3 3s linear infinite;
+            }
+
+            @keyframes leaf {
+              0% {
+                transform: rotate(2deg);
+                transform-origin: 0% 100%;
+              }
+
+              50% {
+                transform: rotate(-2deg);
+                transform-origin: 0% 100%;
+              }
+
+              100% {
+                transform: rotate(2deg);
+                transform-origin: 0% 100%;
+              }
+            }
+
+            @keyframes leaf2 {
+              0% {
+                transform: rotate(1deg);
+                transform-origin: 0% 100%;
+              }
+
+              50% {
+                transform: rotate(3deg);
+                transform-origin: 0% 100%;
+              }
+
+              100% {
+                transform: rotate(1deg);
+                transform-origin: 0% 100%;
+              }
+            }
+
+            @keyframes leaf3 {
+              0% {
+                transform: rotate(4deg);
+                transform-origin: 0% 100%;
+              }
+
+              50% {
+                transform: rotate(-3deg);
+                transform-origin: 0% 100%;
+              }
+
+              100% {
+                transform: rotate(4deg);
+                transform-origin: 0% 100%;
               }
             }
           }
@@ -338,13 +484,24 @@ section {
               .miniFish {
                 width: 5vw;
                 height: 3vw;
+                animation: fish 1.5s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
 
+                @keyframes fish {
+                  0% {
+                    transform: translate(0, 0);
+                  }
+
+                  100% {
+                    transform: translate(0, 10px);
+                  }
+                }
                 &01 {
                 }
 
                 &02 {
                   margin: -3vw 0px 0px 0px;
                   padding: 0px 0px 0px 1.5vw;
+                  animation-delay: 0.3s;
                 }
               }
             }
@@ -359,6 +516,17 @@ section {
               height: 5.5vw;
 
               .hipo {
+                animation: hipo 0.7s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+
+                @keyframes hipo {
+                  0% {
+                    transform: translate(0, 0);
+                  }
+
+                  100% {
+                    transform: translate(0, 10%);
+                  }
+                }
                 &01 {
                   width: 2.5vw;
                   padding: 0 0 0.2vw 0;
@@ -366,11 +534,60 @@ section {
 
                 &02 {
                   width: 1.7vw;
+                  animation-delay: 0.4s;
                 }
 
                 &03 {
                   width: 1vw;
                   padding: 0 0 0.5vw 0.3vw;
+                  animation-delay: 0.3s;
+                }
+              }
+            }
+          }
+
+          .dori {
+            position: absolute;
+            width: 5vw;
+            animation: dori 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+
+            @keyframes dori {
+              0% {
+                transform: translate(0, 0);
+              }
+
+              100% {
+                transform: translate(5px, 10px);
+              }
+            }
+          }
+
+          .nimo-wrap {
+            position: absolute;
+
+            .nimo {
+              animation: nimo 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+
+              @keyframes nimo {
+                0% {
+                  transform: translate(0, 0);
+                }
+
+                100% {
+                  transform: translate(-10px, 10px);
+                }
+              }
+              &01 {
+                width: 4.5vw;
+              }
+
+              &02 {
+                width: 2.5vw;
+                animation-delay: 0.1s;
+
+                img {
+                  margin-top: -30%;
+                  margin-left: 100%;
                 }
               }
             }
@@ -385,10 +602,10 @@ section {
             left: 0;
             bottom: 25%;
 
-            p {
-              font-size: 1.3vw;
-              font-weight: 400;
-              font-family: "Noto Sans KR", sans-serif;
+            h2 {
+              font-size: 24px;
+              font-weight: 200;
+              font-family: "Noto Serif KR", serif;
               line-height: 1.5;
             }
           }
@@ -396,7 +613,7 @@ section {
           .skill_list {
             position: absolute;
             left: 540px;
-            width: 90vw;
+            width: 95vw;
 
             ul {
               display: flex;
@@ -422,19 +639,24 @@ section {
                   top: 5vw;
                 }
 
-                h2 {
-                  font-size: 0.6vw;
-                  color: rgba(0, 0, 0, 0.6);
+                .type {
+                  font-family: "MoonLight";
+                  font-size: 12px;
+                  font-weight: 300;
+                  color: #555;
                 }
-                h3 {
-                  font-size: 1.2vw;
-                  color: #5b5b5b;
+                .name {
+                  font-family: "MoonLight";
+                  font-size: 24px;
+                  font-weight: 300;
                   padding: 0.6vw 0;
                 }
 
-                strong {
-                  font-size: 2vw;
-                  color: #a386a8;
+                .percent {
+                  font-family: "MoonLight";
+                  font-size: 40px;
+                  font-weight: 300;
+                  color: #996f98;
                 }
               }
             }
@@ -485,6 +707,33 @@ section {
         }
 
         &04 {
+          .miniFish-wrap {
+            position: absolute;
+            width: 7vw;
+
+            .miniFish {
+              width: 7vw;
+              height: 3vw;
+              animation: fish 1.5s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+
+              &02 {
+                margin: -3vw 0px 0px 0px;
+                padding: 0px 0px 0px 1.5vw;
+                animation-delay: 0.3s;
+              }
+            }
+          }
+
+          .dori {
+            position: absolute;
+            width: 6vw;
+
+            animation: dori 1s infinite alternate cubic-bezier(0.3, 0.01, 0.65, 0.99);
+
+            img {
+              transform: rotate(12deg);
+            }
+          }
           .leaf-wrap {
             position: absolute;
             z-index: 5;
@@ -564,7 +813,7 @@ section {
                 right: 0;
               }
               &.turtle {
-                width: 10vw;
+                width: 15vw;
                 left: 0;
                 top: 15vw;
               }
@@ -592,7 +841,7 @@ section {
                 left: 0;
               }
               &.stingray {
-                width: 10vw;
+                width: 18vw;
                 right: 0;
                 top: 5vw;
               }
@@ -605,7 +854,7 @@ section {
               position: absolute;
 
               &.whale {
-                width: 10vw;
+                width: 25vw;
                 left: 0;
                 top: 50%;
               }
@@ -615,11 +864,14 @@ section {
 
         h2.title {
           position: absolute;
-          bottom: 40vw;
+          bottom: 38vw;
           left: 5vw;
-          font-size: 2vw;
+          font-family: "Noto Serif KR";
+          font-size: 32px;
+          line-height: 1.5;
           writing-mode: vertical-rl;
           text-orientation: sideways-right;
+          color: #694969;
         }
       }
 
@@ -771,6 +1023,7 @@ section {
       line-height: 1.5;
       margin-bottom: 60px;
     }
+
     ul {
       li {
         &.sns {

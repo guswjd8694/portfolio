@@ -24,11 +24,23 @@
           <img src="./assets/imgs/land.svg" alt="" />
         </div>
         <div class="sun"></div>
-        <div class="sea">
-          <!-- <img src="./assets/imgs/sea.png" alt="sea" /> -->
+        <div class="waveWrap">
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(211,141,141,0.6)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(211,141,141,1)" />
+            </g>
+          </svg>
         </div>
         <div class="ship">
           <img src="./assets/imgs/ship.svg" alt="" />
+        </div>
+        <div class="kv_txt">
+          <h2>Hyun<br />Joying</h2>
+          <p>web developer portfolio site</p>
         </div>
       </article>
     </section>
@@ -108,43 +120,43 @@
 
           <article class="horizon horizon01 bg">
             <div class="leaf-wrap">
-              <div class="left leaf">
+              <div class="left leaf ani2">
                 <img src="./assets/imgs/left_leaf_01.svg" alt="" />
               </div>
-              <div class="left leaf">
+              <div class="left leaf ani1">
                 <img src="./assets/imgs/left_leaf_02.svg" alt="" />
               </div>
-              <div class="left leaf">
+              <div class="left leaf ani2">
                 <img src="./assets/imgs/left_leaf_03.svg" alt="" />
               </div>
-              <div class="left leaf">
+              <div class="left leaf ani3">
                 <img src="./assets/imgs/left_leaf_04.svg" alt="" />
               </div>
-              <div class="left leaf">
+              <div class="left leaf ani1">
                 <img src="./assets/imgs/left_leaf_05.svg" alt="" />
               </div>
-              <div class="left root root01">
+              <div class="left root root01 ani2">
                 <img src="./assets/imgs/left_root_01.svg" alt="" />
               </div>
-              <div class="left root root02">
+              <div class="left root root02 ani3">
                 <img src="./assets/imgs/left_root_02.svg" alt="" />
               </div>
-              <div class="right leaf leaf01">
+              <div class="right leaf leaf01 ani2">
                 <img src="./assets/imgs/right_leaf_01.svg" alt="" />
               </div>
-              <div class="right leaf leaf02">
+              <div class="right leaf leaf02 ani3">
                 <img src="./assets/imgs/right_leaf_02.svg" alt="" />
               </div>
-              <div class="right leaf leaf03">
+              <div class="right leaf leaf03 ani1">
                 <img src="./assets/imgs/right_leaf_03.svg" alt="" />
               </div>
-              <div class="right leaf leaf04">
+              <div class="right leaf leaf04 ani2">
                 <img src="./assets/imgs/right_leaf_04.svg" alt="" />
               </div>
-              <div class="right root root01">
+              <div class="right root root01 ani2">
                 <img src="./assets/imgs/right_root_01.svg" alt="" />
               </div>
-              <div class="right root root02">
+              <div class="right root root02 ani3">
                 <img src="./assets/imgs/right_root_02.svg" alt="" />
               </div>
             </div>
@@ -169,38 +181,50 @@
                   <img src="./assets/imgs/hipo_03.svg" alt="" />
                 </div>
               </div>
+
+              <div class="dori">
+                <img src="./assets/imgs/fish_dori.svg" alt="" />
+              </div>
+              <div class="nimo-wrap">
+                <div class="nimo nimo01">
+                  <img src="./assets/imgs/fish_nimo.svg" alt="" />
+                </div>
+                <div class="nimo nimo02">
+                  <img src="./assets/imgs/fish_nimo2.svg" alt="" />
+                </div>
+              </div>
             </div>
           </article>
           <article class="horizon horizon02 bg">
             <div class="text">
-              <p>제가<br />이런걸<br />좀<br />할 줄 압니다.</p>
+              <h2>제가<br />이런걸<br />좀<br />할 줄 압니다.</h2>
             </div>
             <div class="skill_list">
               <ul>
                 <li>
-                  <h2>HTML</h2>
-                  <h3>마크업</h3>
-                  <strong>90%</strong>
+                  <em class="type">Development</em>
+                  <h3 class="name">HTML, CSS</h3>
+                  <strong class="percent">90%</strong>
                 </li>
                 <li>
-                  <h2>CSS</h2>
-                  <h3>스타일</h3>
-                  <strong>80%</strong>
+                  <em class="type">Development</em>
+                  <h3 class="name">Javascript</h3>
+                  <strong class="percent">70%</strong>
                 </li>
                 <li>
-                  <h2>Javascript</h2>
-                  <h3>자바스크립트</h3>
-                  <strong>70%</strong>
+                  <em class="type">Development</em>
+                  <h3 class="name">Jquery</h3>
+                  <strong class="percent">60%</strong>
                 </li>
                 <li>
-                  <h2>Jquery</h2>
-                  <h3>제이쿼리</h3>
-                  <strong>60%</strong>
+                  <em class="type">Development</em>
+                  <h3 class="name">Three.js</h3>
+                  <strong class="percent">30%</strong>
                 </li>
                 <li>
-                  <h2>Three.js</h2>
-                  <h3>쓰리제이에스</h3>
-                  <strong>30%</strong>
+                  <em class="type">Design</em>
+                  <h3 class="name">PhotoShop, Figma, Zeplin</h3>
+                  <strong class="percent">50%</strong>
                 </li>
               </ul>
             </div>
@@ -225,6 +249,17 @@
             </div>
           </article>
           <article class="horizon horizon04 bg">
+            <div class="miniFish-wrap">
+              <div class="miniFish miniFish01">
+                <img src="./assets/imgs/miniFish_01.svg" alt="" />
+              </div>
+              <div class="miniFish miniFish02">
+                <img src="./assets/imgs/miniFish_02.svg" alt="" />
+              </div>
+            </div>
+            <div class="dori">
+              <img src="./assets/imgs/fish_dori.svg" alt="" />
+            </div>
             <div class="leaf-wrap">
               <div class="leaf">
                 <img src="./assets/imgs/right2_leaf_01.svg" alt="" />

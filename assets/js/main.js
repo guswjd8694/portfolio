@@ -6,6 +6,7 @@ const motionProject = (() => {
     dark: { startValue: 0, endValue: 1, startPoint: 0.92, endPoint: 0.99 },
     light: { startValue: 1, endValue: 0, startPoint: 0, endPoint: 0.3 },
     swim: { startValue: 1, endValue: 0, startPoint: 0, endPoint: 0.3 },
+    test: { startValue: 1, endValue: 0, startPoint: 0, endPoint: 0.3 },
   };
 
   const objs = {
@@ -19,8 +20,13 @@ const motionProject = (() => {
     projectArt: document.querySelector(".project .dark"),
     hipo: document.querySelector(".hipo-wrap"),
     miniFish: document.querySelector(".miniFish-wrap"),
+    miniFish2: document.querySelector(".horizon04 .miniFish-wrap"),
+    dori: document.querySelector(".dori"),
+    dori2: document.querySelector(".horizon04 .dori"),
+    nimo: document.querySelector(".nimo-wrap"),
     skillIntroTxt: document.querySelector(".horizon02 .text"),
     skillList: document.querySelector(".skill_list"),
+    test: document.querySelector(".blowFish"),
   };
 
   const _animate = () => {
@@ -40,6 +46,18 @@ const motionProject = (() => {
 
     objs.miniFish.style.left = `${650 * (innerWidth / 2560)}px`;
     objs.miniFish.style.bottom = `${700 * (innerWidth / 2560)}px`;
+
+    objs.miniFish2.style.left = `${600 * (innerWidth / 2560)}px`;
+    objs.miniFish2.style.bottom = `${850 * (innerWidth / 2560)}px`;
+
+    objs.dori.style.right = `${1000 * (innerWidth / 2560)}px`;
+    objs.dori.style.bottom = `${280 * (innerWidth / 2560)}px`;
+
+    objs.dori2.style.right = `${820 * (innerWidth / 2560)}px`;
+    objs.dori2.style.bottom = `${740 * (innerWidth / 2560)}px`;
+
+    objs.nimo.style.right = `${680 * (innerWidth / 2560)}px`;
+    objs.nimo.style.bottom = `${280 * (innerWidth / 2560)}px`;
 
     objs.skillIntroTxt.style.bottom = `${320 * (innerWidth / 2560)}px`;
 
