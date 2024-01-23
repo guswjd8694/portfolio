@@ -55,6 +55,7 @@ section {
       }
       &.moon_wrap {
         position: relative;
+        transform: translateY(-50%);
 
         .moonBg {
           width: 20vw;
@@ -132,6 +133,15 @@ section {
           font-size: 18px;
           font-weight: 500;
           text-transform: uppercase;
+        }
+        @media screen and (max-width: 767px) {
+          h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+          }
+          p {
+            font-size: 14;
+          }
         }
       }
 
@@ -248,20 +258,28 @@ section {
         &_img {
           width: 20vw;
           margin-bottom: 5vh;
+          @media screen and (max-width: 767px) {
+            width: 60vw;
+          }
         }
         &_txt {
           max-width: 30vw;
           width: 100%;
           text-align: center;
-          font-size: 1vw;
+          font-size: 16px;
           line-height: 1.6;
+
+          @media screen and (max-width: 767px) {
+            max-width: 100%;
+            font-size: 14px;
+          }
         }
       }
     }
   }
 
   &.skill {
-    height: 2000vh;
+    height: 1500vh;
 
     .swim {
       position: fixed;
@@ -328,10 +346,10 @@ section {
               bottom: -5px;
 
               &:nth-child(1) {
-                width: 8vw;
+                width: 7vw;
               }
               &:nth-child(2) {
-                width: 4vw;
+                width: 5vw;
               }
               &:nth-child(3) {
                 z-index: 6;
@@ -340,23 +358,23 @@ section {
               }
               &:nth-child(4) {
                 left: 4%;
-                width: 10vw;
+                width: 9vw;
               }
               &:nth-child(5) {
-                left: 9%;
-                width: 8vw;
+                left: 8%;
+                width: 7vw;
               }
             }
 
             &.root {
               &01 {
-                width: 10vw;
+                width: 8.5vw;
                 left: 0%;
                 bottom: 6%;
                 animation-duration: 5s;
               }
               &02 {
-                width: 11vw;
+                width: 9.5vw;
                 left: 7%;
                 bottom: 0%;
                 animation-duration: 5s;
@@ -607,6 +625,14 @@ section {
               font-weight: 200;
               font-family: "Noto Serif KR", serif;
               line-height: 1.5;
+
+              @media screen and (min-width: 768px) and (max-width: 1023px) {
+                font-size: 18px;
+              }
+              @media screen and (max-width: 767px) {
+                font-size: 12px;
+                margin-left: -20px;
+              }
             }
           }
 
@@ -614,6 +640,10 @@ section {
             position: absolute;
             left: 540px;
             width: 95vw;
+
+            @media screen and (max-width: 767px) {
+              width: 104vw;
+            }
 
             ul {
               display: flex;
@@ -658,13 +688,58 @@ section {
                   font-weight: 300;
                   color: #996f98;
                 }
+
+                @media screen and (min-width: 768px) and (max-width: 1023px) {
+                  .name {
+                    font-size: 20px;
+                    padding: 0.6vw 0;
+                  }
+
+                  .percent {
+                    font-size: 32px;
+                  }
+                }
+                @media screen and (max-width: 767px) {
+                  .type {
+                    font-size: 9px;
+                  }
+                  .name {
+                    font-size: 14px;
+                    padding: 0.6vw 0;
+                  }
+
+                  .percent {
+                    font-size: 20px;
+                  }
+                }
               }
             }
           }
         }
 
         &03 {
-          z-index: 2;
+          .cave-wrap {
+            .cave {
+              position: absolute;
+              bottom: 0;
+            }
+            .caveEyes {
+              position: absolute;
+              width: 2.3vw;
+              animation: eye 3s ease-in-out infinite alternate;
+              @keyframes eye {
+                0% {
+                  opacity: 1;
+                }
+                50% {
+                  opacity: 0;
+                }
+                100% {
+                  opacity: 1;
+                }
+              }
+            }
+          }
 
           .leaf-wrap {
             position: absolute;
@@ -673,35 +748,104 @@ section {
             bottom: 0%;
             width: 19vw;
             height: 12vw;
+
             .leaf {
               position: absolute;
               bottom: 0;
 
               &:nth-child(1) {
-                z-index: 2;
-                width: 8vw;
+                z-index: 4;
+                right: 125%;
+                width: 11vw;
               }
               &:nth-child(2) {
-                left: 3vw;
-                width: 5.5vw;
+                z-index: 0;
+                left: -67%;
+                width: 9.5vw;
               }
               &:nth-child(3) {
-                z-index: 1;
-                left: 2.7vw;
-                width: 9vw;
+                z-index: 3;
+                left: -70%;
+                bottom: -5%;
+                width: 17vw;
               }
               &:nth-child(4) {
-                left: 5vw;
-                width: 8vw;
+                z-index: 2;
+                left: -50%;
+                bottom: -4%;
+                width: 15vw;
               }
             }
 
             .root {
               position: absolute;
-              z-index: -1;
-              bottom: 0;
-              left: 7.5vw;
-              width: 1.8vw;
+              z-index: 1;
+              bottom: 16%;
+              left: -53%;
+              width: 11vw;
+            }
+
+            .ani {
+              &1 {
+                animation: leaf1 2s linear infinite;
+              }
+              &2 {
+                animation: leaf2 5s linear infinite;
+              }
+              &3 {
+                animation: leaf3 4s linear infinite;
+              }
+              &4 {
+                animation: leaf2 2s linear infinite;
+              }
+              &5 {
+                animation: leaf2 2s linear infinite;
+              }
+
+              @keyframes leaf1 {
+                0% {
+                  transform: rotate(1deg);
+                  transform-origin: 0% 100%;
+                }
+                50% {
+                  transform: rotate(3deg);
+                  transform-origin: 0% 100%;
+                }
+                100% {
+                  transform: rotate(1deg);
+                  transform-origin: 0% 100%;
+                }
+              }
+
+              @keyframes leaf2 {
+                0% {
+                  transform: rotate(2deg);
+                  transform-origin: 0% 100%;
+                }
+                50% {
+                  transform: rotate(-2deg);
+                  transform-origin: 0% 100%;
+                }
+                100% {
+                  transform: rotate(2deg);
+                  transform-origin: 0% 100%;
+                }
+              }
+
+              @keyframes leaf3 {
+                0% {
+                  transform: rotate(4deg);
+                  transform-origin: 0% 100%;
+                }
+                50% {
+                  transform: rotate(-3deg);
+                  transform-origin: 0% 100%;
+                }
+                100% {
+                  transform: rotate(4deg);
+                  transform-origin: 0% 100%;
+                }
+              }
             }
           }
         }
@@ -795,6 +939,7 @@ section {
             background: linear-gradient(0deg, rgba(249, 223, 214, 1) 0%, rgba(239, 189, 192, 1) 100%);
           }
           &02 {
+            z-index: 1;
             background: linear-gradient(0deg, rgba(239, 189, 192, 1) 0%, rgba(216, 174, 188, 1) 100%);
 
             .cliff {
@@ -809,13 +954,156 @@ section {
               }
               &.blowFish {
                 width: 6vw;
-                bottom: 0;
+                bottom: -2vw;
                 right: 0;
               }
               &.turtle {
                 width: 15vw;
                 left: 0;
                 top: 15vw;
+              }
+            }
+
+            .about_wrap {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 25vw;
+
+              p {
+                font-family: "Noto Serif KR", serif;
+                font-size: 18px;
+                font-weight: lighter;
+                color: #625573;
+                letter-spacing: 6px;
+                transform: rotate(-90deg);
+                transform-origin: bottom;
+
+                @media screen and (min-width: 768px) and (max-width: 1023px) {
+                  font-size: 18px;
+                }
+                @media screen and (max-width: 767px) {
+                  font-size: 12px;
+                  letter-spacing: 2px;
+                }
+              }
+
+              .text {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                transform: rotate(-90deg);
+                transform-origin: bottom;
+                font-family: "MoonLight";
+                font-weight: normal;
+                text-transform: uppercase;
+
+                &:before {
+                  content: "";
+                  display: block;
+                  width: 80px;
+                  height: 1px;
+                  background-color: #fff;
+                  margin-right: 20px;
+                }
+
+                &01 {
+                  bottom: 53vw;
+                  left: 0;
+                }
+                &02 {
+                  bottom: 71vw;
+                  right: 18vw;
+                }
+                &03 {
+                  bottom: 86vw;
+                  left: 18vw;
+                }
+                &04 {
+                  bottom: 100vw;
+                  right: 0;
+                }
+                &05 {
+                  bottom: 120vw;
+                  left: 21vw;
+                }
+
+                dt {
+                  font-size: 18px;
+                  color: #625573;
+                }
+                dd {
+                  font-size: 12px;
+                  color: #fff;
+                  margin-top: 5px;
+                }
+
+                @media screen and (min-width: 768px) and (max-width: 1023px) {
+                  &01 {
+                    bottom: 20vw;
+                    left: -10vw;
+                  }
+                  &02 {
+                    bottom: 68vw;
+                    right: 10vw;
+                  }
+                  &03 {
+                    bottom: 100vw;
+                    left: 15vw;
+                  }
+                  &04 {
+                    bottom: 130vw;
+                    right: 0;
+                  }
+                  &05 {
+                    bottom: 180vw;
+                    left: 21vw;
+                  }
+
+                  dt {
+                    font-size: 18px;
+                  }
+                  dd {
+                    font-size: 12px;
+                  }
+                }
+
+                @media screen and (max-width: 767px) {
+                  &:before {
+                    width: 40px;
+                    margin-right: 10px;
+                  }
+
+                  &01 {
+                    bottom: 20vw;
+                    left: -10vw;
+                  }
+                  &02 {
+                    bottom: 130vw;
+                    right: -4vw;
+                  }
+                  &03 {
+                    bottom: 170vw;
+                    left: 0vw;
+                  }
+                  &04 {
+                    bottom: 220vw;
+                    right: -10vw;
+                  }
+                  &05 {
+                    bottom: 280vw;
+                    left: 21vw;
+                  }
+
+                  dt {
+                    font-size: 14px;
+                  }
+                  dd {
+                    font-size: 10px;
+                  }
+                }
               }
             }
           }
@@ -869,9 +1157,18 @@ section {
           font-family: "Noto Serif KR";
           font-size: 32px;
           line-height: 1.5;
-          writing-mode: vertical-rl;
-          text-orientation: sideways-right;
+          // writing-mode: vertical-rl;
+          // text-orientation: sideways-right;
+          transform: rotate(-90deg);
+          transform-origin: bottom;
           color: #694969;
+
+          @media screen and (min-width: 768px) and (max-width: 1023px) {
+            font-size: 20px;
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 18px;
+          }
         }
       }
 
@@ -941,7 +1238,7 @@ section {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 9;
+        z-index: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 4vw;
@@ -972,6 +1269,21 @@ section {
               text-align: left;
               cursor: pointer;
               transition: color 0.2s;
+            }
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          display: flex;
+          flex-direction: column;
+          gap: 5vw;
+
+          li {
+            font-size: 12px;
+            button {
+              h2 {
+                font-size: 16px;
+              }
             }
           }
         }
@@ -1022,6 +1334,10 @@ section {
       color: #fff;
       line-height: 1.5;
       margin-bottom: 60px;
+
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+      }
     }
 
     ul {
@@ -1038,6 +1354,10 @@ section {
           color: #d6fffc;
           text-decoration: none;
           letter-spacing: 1.2px;
+
+          @media screen and (max-width: 767px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -1080,9 +1400,13 @@ body.popupOpen {
 
   .popup_contents {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
     max-width: 800px;
-    width: 75vw;
     max-height: 800px;
+    width: 75vw;
     height: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -1093,6 +1417,7 @@ body.popupOpen {
 
     .view {
       width: 100%;
+      height: 50%;
       margin-top: 20px;
       margin-bottom: 40px;
 
@@ -1102,8 +1427,13 @@ body.popupOpen {
     }
 
     .desc_wrap {
-      position: absolute;
-      bottom: 90px;
+      // position: absolute;
+      // bottom: 90px;
+      height: 50%;
+
+      @media screen and (max-width: 767px) {
+        position: static;
+      }
 
       ul {
         display: flex;
@@ -1126,6 +1456,18 @@ body.popupOpen {
             color: #8fa0ce;
             font-size: 17px;
           }
+
+          @media screen and (max-width: 767px) {
+            gap: 18px;
+            li {
+              strong {
+                font-size: 10px;
+              }
+              p {
+                font-size: 14px;
+              }
+            }
+          }
         }
       }
     }
@@ -1145,6 +1487,10 @@ body.popupOpen {
     background-color: #323232;
     transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
     cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
 
     &:hover {
       background-color: #e5306c;

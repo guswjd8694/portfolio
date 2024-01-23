@@ -1,7 +1,9 @@
 const motions = {
   calcValue: (_el, options) => {
     let currentScroll = 0;
+    let offsetTop = 0;
 
+    // 스크롤이 요소에 닿는 시점
     if (_el.offsetTop !== undefined) {
       offsetTop = _el.offsetTop;
       currentScroll = Math.max(0, scrollY - offsetTop);
