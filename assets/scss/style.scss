@@ -21,6 +21,17 @@ header {
     ul.btnList {
       display: flex;
 
+      &.on {
+        .menuBtn {
+          .eq0 {
+          }
+          .eq1 {
+          }
+          .eq2 {
+          }
+        }
+      }
+
       .menuBtn {
         display: block;
         position: absolute;

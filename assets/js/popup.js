@@ -51,14 +51,14 @@ function setupPopup() {
         role: "About, Magazine, Cart, Header, Footer",
         date: "2023. 08",
       },
-      {
-        project: "airpods",
-        src: "./assets/video/hanwha.mov",
-        client: "study",
-        desc: "scroll interaction practice",
-        role: "스크롤 모션 연습용 클론 코딩",
-        date: "2022. 09",
-      },
+      // {
+      //   project: "airpods",
+      //   src: "./assets/video/hanwha.mov",
+      //   client: "study",
+      //   desc: "scroll interaction practice",
+      //   role: "스크롤 모션 연습용 클론 코딩",
+      //   date: "2022. 09",
+      // },
     ];
     const client = popupContents.querySelector(".client p");
     const desc = popupContents.querySelector(".desc p");
