@@ -16,7 +16,7 @@ function setupPopup() {
         src: "./assets/video/galaxy.mov",
         client: "samsung",
         desc: "responsive web site",
-        role: "html, css, javascript development",
+        role: "KV부터 충전기 까지 컨텐츠 반응형과 탭버튼 모션",
         date: "2023. 02",
       },
       {
@@ -24,7 +24,7 @@ function setupPopup() {
         src: "./assets/video/fave.mov",
         client: "fave",
         desc: "interactive web site (3d ver, static ver)",
-        role: "html, css, javascript development",
+        role: "로딩 화면, 메뉴 모션 등 static 요소 곳곳(현재 사라진 static ver도 작업)",
         date: "2022. 05",
       },
       {
@@ -32,7 +32,7 @@ function setupPopup() {
         src: "./assets/video/hanwha.mov",
         client: "hanwha",
         desc: "Three.js Interactive Study",
-        role: "Three.js Development",
+        role: "Three.js 스터디용으로, 스크롤 모션 구현에 큰 도움이 된 작업",
         date: "2022. 11",
       },
       {
@@ -40,15 +40,15 @@ function setupPopup() {
         src: "./assets/video/semiconductor.mov",
         client: "samsung",
         desc: "Samsung Semiconductor PROD",
-        role: "html, css, javascript development",
+        role: "Header, Footer 제외 모든 컨텐츠 작업",
         date: "2023. 07",
       },
       {
         project: "wine",
-        src: "./assets/video/hanwha.mov",
+        src: "./assets/video/weeklywine.mov",
         client: "weekly wine",
         desc: "cafe24 site renewal",
-        role: "html, css, javascript development",
+        role: "About, Magazine, Cart, Header, Footer",
         date: "2023. 08",
       },
       {
@@ -56,7 +56,7 @@ function setupPopup() {
         src: "./assets/video/hanwha.mov",
         client: "study",
         desc: "scroll interaction practice",
-        role: "html, css, javascript development",
+        role: "스크롤 모션 연습용 클론 코딩",
         date: "2022. 09",
       },
     ];
