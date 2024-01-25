@@ -1358,7 +1358,7 @@ section.skill article.reverse.bg02 img.blowFish {
 
 section.skill article.reverse.bg02 img.turtle {
   width: 15vw;
-  left: 0;
+  left: 3vw;
   top: 15vw;
 }
 
@@ -1543,13 +1543,13 @@ section.skill article.reverse.bg03 img.cliff {
 
 section.skill article.reverse.bg03 img.squid {
   width: 6vw;
-  right: 0;
+  right: 12vw;
   bottom: 5vw;
 }
 
 section.skill article.reverse.bg03 img.miniOcto {
   width: 10vw;
-  left: 0;
+  left: 13vw;
 }
 
 section.skill article.reverse.bg03 img.stingray {
