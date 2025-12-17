@@ -1,4 +1,7 @@
 # 🌊 Deep Dive : My Developer Journey
+
+<img src="assets/preview.png" alt="Project Preview" width="100%">
+
 > **"Slow, but Deep Dive."**<br>
 > 노을에서 심해로, 그리고 다시 별이 빛나는 밤으로.<br>
 > 개발의 세계에 입문하던 저의 설렘과 몰입을 담은 **인터랙티브 스토리텔링 웹사이트**입니다.
@@ -8,10 +11,6 @@
 ### 바로가기 (Live Demo)
 https://guswjd8694.github.io/portfolio/
 
-<br>
-
-### 미리보기 (Project Preview)
-<img src="assets/preview.png" alt="Project Preview" width="100%">
 
 <br>
 
