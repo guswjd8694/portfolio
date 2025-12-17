@@ -45,3 +45,7 @@ https://guswjd8694.github.io/portfolio/
     <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
     <img alt="Figma" src="https://img.shields.io/badge/Figma-A991F7?style=flat-square&logo=figma&logoColor=white">
 </p>
+
+<br>
+
+<img src="assets/preview.gif" alt="Project Preview 움직이는 버전" width="100%">
